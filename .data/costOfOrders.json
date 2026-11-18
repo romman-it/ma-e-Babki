@@ -1,0 +1,21 @@
+{
+  "hireDate": "2026-10-27",
+  "seniorityBonus1Year": 7.00,
+  "seniorityBonus2Years": 9.00,
+  "seniorityBonus3Years": 12.00,
+  "paymentForOrder": 5.00,
+  "paymentForMail": 2.50,
+  "paymentForBigOrder": 10.00,
+  "paymentForHours": 2.20,
+  "paymentForOneDag": 0.50,
+  "paymentForCancelledOrder": 3.50,
+  "paymentForCancelledMail": 1.50,
+  "regionMinLegalBonus": 5.00,
+  "regionMinimumDaily": 126.00,
+  "cityMorningRate": 4.50,
+  "cityDayRate": 3.50,
+  "cityEveningRate": 4.50,
+  "cityZoneBRate": 4.50,
+  "cityAfter19Surcharge": 1.00,
+  "uiTheme": "CYBERPUNK"
+}

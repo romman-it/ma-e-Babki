@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+group = 'ru.skillbox'
+version = '4.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+
+    }
+}
+javafx {
+    version = "21" // Должно совпадать с версией Java (21)
+    modules = ['javafx.controls', 'javafx.fxml'] // Модули, которые используешь
+}
+repositories {
+    mavenCentral()
+}
+
+ext {
+    lombokVersion   = '1.18.46'
+    slf4jVersion    = '2.0.13'
+    logbackVersion  = '1.5.6'
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+application {
+    mainClass = 'ru.skillbox.FileImporterApplication'
+}
+
+test {
+    useJUnitPlatform()
+}
